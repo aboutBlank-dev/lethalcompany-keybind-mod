@@ -1,4 +1,5 @@
-﻿using BepInEx;
+﻿using System.IO;
+using BepInEx;
 using BepInEx.Configuration;
 using HarmonyLib;
 
@@ -13,6 +14,9 @@ namespace aboutblank.lethalcompany
         public const string pluginName = "Keybind Mod";
         public const string pluginVersion = "1.0.0";
 
+        public ConfigFile ModConfig => configFile;
+        private ConfigFile configFile;
+
         public static ConfigEntrySetting<string>[] SlotKeybinds = new ConfigEntrySetting<string>[4]
         {
             new ConfigEntrySetting<string>("Slot1", "<Keyboard>/1", "Left-Most Slot in your Inventory"),
@@ -23,27 +27,27 @@ namespace aboutblank.lethalcompany
 
         public static ConfigEntrySetting<string>[] EmoteKeybinds = new ConfigEntrySetting<string>[2]
         {
-            new ConfigEntrySetting<string>("Dance", "<Keyboard>/Y"),
-            new ConfigEntrySetting<string>("Point", "<Keyboard>/U")
+            new ConfigEntrySetting<string>("Dance", "<Keyboard>/Y", ""),
+            new ConfigEntrySetting<string>("Point", "<Keyboard>/U", "")
         };
-
 
         public void Awake()
         {
             Instance = this;
-            base.Config.SaveOnConfigSet = false;
+
+            configFile = new ConfigFile(Path.Combine(Paths.ConfigPath, "keybindmod.cfg"), true);
 
             for (int i = 0; i < SlotKeybinds.Length; i++)
             {
                 ConfigEntrySetting<string> config = SlotKeybinds[i];
-                ConfigEntry<string> configEntry = base.Config.Bind("KeyBinds", config.ConfigName, config.DefaultValue, config.ConfigDesc);
+                ConfigEntry<string> configEntry = configFile.Bind("KeyBinds", config.ConfigName, config.DefaultValue, config.ConfigDesc);
                 config.ConfigEntry = configEntry;
             }
 
             for (int i = 0; i < EmoteKeybinds.Length; i++)
             {
                 ConfigEntrySetting<string> config = EmoteKeybinds[i];
-                ConfigEntry<string> configEntry = base.Config.Bind("Keybinds", config.ConfigName, config.DefaultValue, config.ConfigDesc);
+                ConfigEntry<string> configEntry = configFile.Bind("Keybinds 2", config.ConfigName, config.DefaultValue, config.ConfigDesc);
                 config.ConfigEntry = configEntry;
             }
 
