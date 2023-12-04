@@ -1,0 +1,142 @@
+{
+  "name": "AboutBlankPlayerInput",
+  "maps": [
+    {
+      "name": "Hotbar",
+      "id": "b2085b03-1185-4faf-a61d-d90e66bf0628",
+      "actions": [
+        {
+          "name": "Hotbar1",
+          "type": "Button",
+          "id": "50066412-b68e-491e-beae-d49ee8269555",
+          "expectedControlType": "Button",
+          "processors": "",
+          "interactions": "",
+          "initialStateCheck": false
+        },
+        {
+          "name": "Hotbar2",
+          "type": "Button",
+          "id": "20f4324b-ad17-4672-b385-6f7d8210a341",
+          "expectedControlType": "Button",
+          "processors": "",
+          "interactions": "",
+          "initialStateCheck": false
+        },
+        {
+          "name": "Hotbar3",
+          "type": "Button",
+          "id": "e1a48385-25b6-4f50-a8ff-68a244c1575c",
+          "expectedControlType": "Button",
+          "processors": "",
+          "interactions": "",
+          "initialStateCheck": false
+        },
+        {
+          "name": "Hotbar4",
+          "type": "Button",
+          "id": "e6b48f5f-ab20-4b8d-810a-44aa529dd958",
+          "expectedControlType": "Button",
+          "processors": "",
+          "interactions": "",
+          "initialStateCheck": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "",
+          "id": "6314dff1-e4f6-410e-a452-73e63c9c4d8b",
+          "path": "<Keyboard>/1",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Hotbar1",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "f61c9a82-93e8-4b1c-babf-411dcd57d16f",
+          "path": "<Keyboard>/2",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Hotbar2",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "b47eb7ef-9e76-40e4-9116-12f0a5a8a9ab",
+          "path": "<Keyboard>/3",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Hotbar3",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "d2fa107b-fcf9-484c-8672-681ebefd91e8",
+          "path": "<Keyboard>/4",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Hotbar4",
+          "isComposite": false,
+          "isPartOfComposite": false
+        }
+      ]
+    },
+    {
+      "name": "Emotes",
+      "id": "3d681e73-20b2-4b13-bd0b-c91007f58543",
+      "actions": [
+        {
+          "name": "Emote1",
+          "type": "Button",
+          "id": "b446c280-0bd7-4f7b-96eb-083f2ba32c6a",
+          "expectedControlType": "Button",
+          "processors": "",
+          "interactions": "",
+          "initialStateCheck": false
+        },
+        {
+          "name": "Emote2",
+          "type": "Button",
+          "id": "e01cf850-940e-47ae-8399-c87c89deca1a",
+          "expectedControlType": "Button",
+          "processors": "",
+          "interactions": "",
+          "initialStateCheck": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "",
+          "id": "30944bf7-26f7-4809-b347-7089265388b3",
+          "path": "<Keyboard>/y",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Emote1",
+          "isComposite": false,
+          "isPartOfComposite": false
+        },
+        {
+          "name": "",
+          "id": "4a8f1daa-4c26-41f4-b8dc-84013927ec29",
+          "path": "<Keyboard>/u",
+          "interactions": "",
+          "processors": "",
+          "groups": "",
+          "action": "Emote2",
+          "isComposite": false,
+          "isPartOfComposite": false
+        }
+      ]
+    }
+  ],
+  "controlSchemes": []
+}
